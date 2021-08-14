@@ -26,6 +26,7 @@ function onStartButton() {
     }
 
     isActive = true;
+    refs.start.disabled = true;
     interval = setInterval(() => {
         refs.body.style.backgroundColor = colors[randomIntegerFromInterval(0, 5)];
     }, 1000);
@@ -33,6 +34,7 @@ function onStartButton() {
 
 function onStopButton() {
     isActive = false;
+    refs.start.disabled = false;
     clearInterval(interval)
 }
 
